@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7ED060D95266728376FFB081 /* Pods_ExMicAttPermission.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F5D5307CB8B19014E80E3E /* Pods_ExMicAttPermission.framework */; };
 		C681FD782785D60E00A11AEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681FD772785D60E00A11AEC /* AppDelegate.swift */; };
 		C681FD7A2785D60E00A11AEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681FD792785D60E00A11AEC /* SceneDelegate.swift */; };
 		C681FD7C2785D60E00A11AEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681FD7B2785D60E00A11AEC /* ViewController.swift */; };
 		C681FD7F2785D60E00A11AEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C681FD7D2785D60E00A11AEC /* Main.storyboard */; };
 		C681FD812785D61000A11AEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C681FD802785D61000A11AEC /* Assets.xcassets */; };
 		C681FD842785D61000A11AEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C681FD822785D61000A11AEC /* LaunchScreen.storyboard */; };
+		C681FD8E2785D7E300A11AEC /* MicPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681FD8D2785D7E300A11AEC /* MicPermissionManager.swift */; };
+		C681FD902785DD3E00A11AEC /* ATTPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681FD8F2785DD3E00A11AEC /* ATTPermissionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15876555B8626AFEFEC3DA1D /* Pods-ExMicAttPermission.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExMicAttPermission.release.xcconfig"; path = "Target Support Files/Pods-ExMicAttPermission/Pods-ExMicAttPermission.release.xcconfig"; sourceTree = "<group>"; };
+		2BF5234E849EC821B5DF3A1C /* Pods-ExMicAttPermission.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExMicAttPermission.debug.xcconfig"; path = "Target Support Files/Pods-ExMicAttPermission/Pods-ExMicAttPermission.debug.xcconfig"; sourceTree = "<group>"; };
+		53F5D5307CB8B19014E80E3E /* Pods_ExMicAttPermission.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExMicAttPermission.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C681FD742785D60E00A11AEC /* ExMicAttPermission.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExMicAttPermission.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C681FD772785D60E00A11AEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C681FD792785D60E00A11AEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +30,8 @@
 		C681FD802785D61000A11AEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C681FD832785D61000A11AEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C681FD852785D61000A11AEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C681FD8D2785D7E300A11AEC /* MicPermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicPermissionManager.swift; sourceTree = "<group>"; };
+		C681FD8F2785DD3E00A11AEC /* ATTPermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTPermissionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ED060D95266728376FFB081 /* Pods_ExMicAttPermission.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		881AB4247D22704B2880D4A4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2BF5234E849EC821B5DF3A1C /* Pods-ExMicAttPermission.debug.xcconfig */,
+				15876555B8626AFEFEC3DA1D /* Pods-ExMicAttPermission.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C681FD6B2785D60E00A11AEC = {
 			isa = PBXGroup;
 			children = (
 				C681FD762785D60E00A11AEC /* ExMicAttPermission */,
 				C681FD752785D60E00A11AEC /* Products */,
+				881AB4247D22704B2880D4A4 /* Pods */,
+				F2B8A3112CD291DC1E68499E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +79,22 @@
 				C681FD772785D60E00A11AEC /* AppDelegate.swift */,
 				C681FD792785D60E00A11AEC /* SceneDelegate.swift */,
 				C681FD7B2785D60E00A11AEC /* ViewController.swift */,
+				C681FD8D2785D7E300A11AEC /* MicPermissionManager.swift */,
+				C681FD8F2785DD3E00A11AEC /* ATTPermissionManager.swift */,
 				C681FD7D2785D60E00A11AEC /* Main.storyboard */,
 				C681FD802785D61000A11AEC /* Assets.xcassets */,
 				C681FD822785D61000A11AEC /* LaunchScreen.storyboard */,
 				C681FD852785D61000A11AEC /* Info.plist */,
 			);
 			path = ExMicAttPermission;
+			sourceTree = "<group>";
+		};
+		F2B8A3112CD291DC1E68499E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53F5D5307CB8B19014E80E3E /* Pods_ExMicAttPermission.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C681FD882785D61000A11AEC /* Build configuration list for PBXNativeTarget "ExMicAttPermission" */;
 			buildPhases = (
+				04AEB31BAEFEFCB46F60A565 /* [CP] Check Pods Manifest.lock */,
 				C681FD702785D60E00A11AEC /* Sources */,
 				C681FD712785D60E00A11AEC /* Frameworks */,
 				C681FD722785D60E00A11AEC /* Resources */,
+				CF63EEC8C3DB9A6B43F73905 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,13 +165,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04AEB31BAEFEFCB46F60A565 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ExMicAttPermission-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF63EEC8C3DB9A6B43F73905 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExMicAttPermission/Pods-ExMicAttPermission-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExMicAttPermission/Pods-ExMicAttPermission-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExMicAttPermission/Pods-ExMicAttPermission-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C681FD702785D60E00A11AEC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C681FD902785DD3E00A11AEC /* ATTPermissionManager.swift in Sources */,
 				C681FD7C2785D60E00A11AEC /* ViewController.swift in Sources */,
 				C681FD782785D60E00A11AEC /* AppDelegate.swift in Sources */,
+				C681FD8E2785D7E300A11AEC /* MicPermissionManager.swift in Sources */,
 				C681FD7A2785D60E00A11AEC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +360,7 @@
 		};
 		C681FD892785D61000A11AEC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BF5234E849EC821B5DF3A1C /* Pods-ExMicAttPermission.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +389,7 @@
 		};
 		C681FD8A2785D61000A11AEC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15876555B8626AFEFEC3DA1D /* Pods-ExMicAttPermission.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
